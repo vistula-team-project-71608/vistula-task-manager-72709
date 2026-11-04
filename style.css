@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+    color: #202938;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #667085;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    font: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #2563eb;
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    background: #2563eb;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#task-submit {
+    margin-top: 15px;
+}
+
+#cancel-edit {
+    background: #64748b;
+}
+
+#status-message {
+    text-align: center;
+    min-height: 20px;
+    color: #15803d;
+}
+
+#status-message.error {
+    color: #dc2626;
+}
+
+.task-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    padding: 18px;
+    margin-bottom: 12px;
+}
+
+.task-title {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.task-description {
+    color: #64748b;
+    white-space: pre-wrap;
+}
+
+.task-status {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #d97706;
+}
+
+.task-item.completed .task-status {
+    color: #16a34a;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.task-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.edit-task {
+    background: #475569;
+}
+
+.toggle-task {
+    background: #16a34a;
+}
+
+.delete-task {
+    background: #dc2626;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+}
+
+footer a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
