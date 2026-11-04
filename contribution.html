@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Contribution</title>
+</head>
+<body>
+    <h1>Team Contribution</h1>
+    
+    <button id="load-contributor">Show Contributor</button>
+    <div id="contributor-student-id"></div>
+    
+    <br><br>
+    <a href="index.html">Back to Task Manager</a>
+
+    <script>
+        document.getElementById('load-contributor').addEventListener('click', async () => {
+            try {
+                const response = await fetch('contribution.json');
+                if (!response.ok) throw new Error('Failed to load JSON');
+                const data = await response.json();
+                document.getElementById('contributor-student-id').textContent = data.contributorStudentID;
+            } catch (error) {
+                document.getElementById('contributor-student-id').textContent = 'Error';
+            }
+        });
+    </script>
+</body>
+</html>
